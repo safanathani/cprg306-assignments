@@ -13,6 +13,7 @@ export default function ItemList() {
     { name: "Toilet Paper, 12 pack 🧻", quantity: 1, category: "Household Section" },
     { name: "Paper Towels, 6 pack 🧻", quantity: 1, category: "Household Section" },
     { name: "Dish Soap 🧽", quantity: 1, category: "Household Section" },
+    { name: "Hand Soap 🧼", quantity: 4, category: "Household Section" },
   ];
 
   return (
