@@ -1,13 +1,10 @@
-import Link from "next/link";
-export default function StudentInfo() {
+import StudentInfo from "./student-info";
+
+export default function Page() {
   return (
-    <div>
-      <p>Safa Nathani</p>
-      <p>
-        <Link href="https://github.com/safanathani/cprg306-assignments">
-          https://github.com/safanathani/cprg306-assignments
-        </Link>
-      </p>
-    </div>
+    <main>
+      <h1>Shopping List</h1>
+      <StudentInfo />
+    </main>
   );
 }

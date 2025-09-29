@@ -13,13 +13,15 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Shopping List",
-  description: "Week 3 Assignment",
+  description: "CPRG 306 Web Development 2 Assignments",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
