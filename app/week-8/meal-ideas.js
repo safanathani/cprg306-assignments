@@ -30,24 +30,30 @@ export default function MealIdeas({ ingredient }) {
 
   return (
     <div className="bg-white rounded-md shadow-md p-4 w-full max-w-md">
+      {/* Title */}
       <h2 className="text-2xl font-bold mb-4 text-blue-600">
         Meal Ideas for <span className="capitalize">{ingredient}</span>
       </h2>
 
+      {/* Conditional rendering messages */}
       {!ingredient && (
         <p className="text-gray-700">Select an item to see meal ideas.</p>
       )}
 
       {ingredient && meals.length === 0 && (
-        <p className="text-gray-700">No meal ideas found for "{ingredient}".</p>
+        <p className="text-gray-700">
+          No meal ideas found for &quot;{ingredient}&quot;.
+        </p>
       )}
 
+      {/* Render meal list */}
       <ul className="space-y-3">
         {meals.map((meal) => (
           <li
             key={meal.idMeal}
             className="flex items-center bg-gray-100 rounded-md p-2 hover:bg-gray-200 transition"
           >
+            
             <img
               src={meal.strMealThumb}
               alt={meal.strMeal}
