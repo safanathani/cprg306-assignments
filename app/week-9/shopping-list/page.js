@@ -11,6 +11,11 @@ import itemsData from "./items.json";
 export default function Page() {
   const { user } = useUserAuth();
 
+  
+  const [items, setItems] = useState(itemsData);
+  const [selectedItemName, setSelectedItemName] = useState("");
+
+  
   if (!user) {
     return (
       <main className="min-h-screen bg-black flex items-center justify-center px-4">
@@ -29,9 +34,6 @@ export default function Page() {
       </main>
     );
   }
-
-  const [items, setItems] = useState(itemsData);
-  const [selectedItemName, setSelectedItemName] = useState("");
 
   const handleAddItem = (newItem) => {
     const itemWithId = {
